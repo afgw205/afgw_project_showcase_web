@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styles for collapsible sections */
+        .collapsible {
+            background-color: transparent;
+            color: #007BFF;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+            text-align: left;
+            outline: none;
+            transition: color 0.3s ease;
+        }
+
+        .collapsible:hover {
+            color: #0056b3;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            margin-top: 5px;
+        }
+
+        .content ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Your Name</h1>
+        <p>Software Developer | Data Scientist | Educator</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A brief introduction about yourself, your background, and what drives you in your profession.</p>
+    </section>
+
+    <!-- Collapsible Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <!-- First item, always visible -->
+        <ul>
+            <li><strong>PhD in Directional Statistics</strong> - University Name (Year)</li>
+        </ul>
+        <!-- Button to show more -->
+        <button type="button" class="collapsible">Show More</button>
+        <!-- Collapsible content -->
+        <div class="content">
+            <ul>
+                <li><strong>Master of Science in Statistics</strong> - University Name (Year)</li>
+                <li><strong>Bachelor of Science in Mathematics</strong> - University Name (Year)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <ul>
+            <li><strong>Job Title</strong> - Company Name (Year - Present)</li>
+            <li><strong>Job Title</strong> - Company Name (Year - Year)</li>
+        </ul>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, C#, JavaScript, Dart</li>
+            <li>Frameworks: Flutter, React, Django</li>
+            <li>Data Analysis: Pandas, NumPy, SciPy, Machine Learning</li>
+            <li>Soft Skills: Problem-Solving, Communication, Teamwork</li>
+        </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project">
+            <h3>Project Title</h3>
+            <p>Brief description of the project.</p>
+            <a href="link-to-live-demo" target="_blank">Live Demo</a> |
+            <a href="link-to-github-repo" target="_blank">GitHub Repo</a>
+            <img src="screenshot1.png" alt="Screenshot of the project">
+        </div>
+        <div class="project">
+            <h3>Project Title</h3>
+            <p>Brief description of the project.</p>
+            <a href="link-to-live-demo" target="_blank">Live Demo</a> |
+            <a href="link-to-github-repo" target="_blank">GitHub Repo</a>
+            <img src="screenshot2.png" alt="Screenshot of the project">
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>Certifications & Courses</h2>
+        <ul>
+            <li>Certification Name - Issuing Organization (Year)</li>
+            <li>Course Name - Platform (Year)</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to handle collapsible behavior -->
+    <script>
+        // Handle collapsible behavior
+        var coll = document.getElementsByClassName("collapsible")[0];
+        var content = document.getElementsByClassName("content")[0];
+
+        coll.addEventListener("click", function() {
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                coll.textContent = "Show More";
+            } else {
+                content.style.display = "block";
+                coll.textContent = "Show Less";
+            }
+        });
+    </script>
+</body>
+</html>
